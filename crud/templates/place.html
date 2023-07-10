@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sauna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 1rem;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'list' %}">サウナアプリ</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              {% if request.user.is_authenticated %}
+              <span class="navbar-text">
+                ようこそ{{ user.get_username}}さん
+              </span>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">ログアウト</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">ログイン</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        </nav>
+      <nav>
+        <div class="menu">
+          <a href="{% url 'top' %}">sauna</a>
+          <!-- <a href="place.html">有名所</a> -->
+          <a href="{% url 'place' %}">有名所</a>
+          <a href="{% url 'food' %}">サウナいろいろ</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 id="title1" class="title1">有名サウナ店の紹介</h1>
+      <div id="saunaplace01" class="saunaplace01">
+        <div id="saunaplace01img" class="saunaplace01img">
+          <img src="{% static 'img/saunaplace1.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace01ex" class="saunaplace01ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>レインボーサウナ新小岩店</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>高温サウナ室114度、中温サウナ室90度、ナノミストサウナ45度~50度</td></tr>
+          <tr><td>料金</td><td>朝風呂1時間コース1000円、3時間コース1700円、普通コース2300円</td></tr>
+          <tr><td>営業時間</td><td>24時間営業</td></tr>
+          <tr><td>住所</td><td>東京都葛飾区新小岩1-49-1</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.4285796741965!2d139.85731007554946!3d35.71567687257615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018860361e24f9b%3A0x81892b455fc83dc!2z44CSMTI0LTAwMjQg5p2x5Lqs6YO96JGb6aO-5Yy65paw5bCP5bKp77yR5LiB55uu77yU77yZ4oiS77yRIOOCteODs-ODkeODrOOCuQ!5e0!3m2!1sja!2sjp!4v1685573544053!5m2!1sja!2sjp" width="650" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+      <div id="saunaplace02" class="saunaplace02">
+        <div id="saunaplace02img" class="saunaplace02img">
+          <img src="{% static 'img/saunaplace2.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace02ex" class="saunaplace2ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>草加健康センター</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>高温サウナ温度96度</td></tr>
+          <tr><td>料金</td><td>一般料金900円、小学生300円、幼児（未就学）無料</td></tr>
+          <tr><td>営業時間</td><td>10:00～翌朝8:00</td></tr>
+          <tr><td>住所</td><td>埼玉県草加市北谷2-23-23</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3234.318843965241!2d139.7782091755554!3d35.84118457253598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601896adab8cb72d%3A0x23e9db6980ae6ffc!2z44CSMzQwLTAwNDYg5Z-8546J55yM6I2J5Yqg5biC5YyX6LC377yS5LiB55uu77yS77yT4oiS77yS77yTIOiNieWKoOWBpeW6t-OCu-ODs-OCv-ODvA!5e0!3m2!1sja!2sjp!4v1685578773280!5m2!1sja!2sjp" width="650" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+      <div id="saunaplace03" class="saunaplace03">
+        <div id="saunaplace03img" class="saunaplace03img">
+          <img src="{% static 'img/saunaplace3.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace03ex" class="saunaplace3ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>サウナ＆カプセルホテルウェルビー栄</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>ストーン式サウナ、フィランド式サウナ、ミストサウナ</td></tr>
+          <tr><td>料金</td><td>平日2000円(2時間)、+1時間ごとに500円、最大料金4000円、ナイト2時間2500円<br>土日祝2500円、+1時間ごとに500円、最大料金4500円、ナイト2時間3000円 </td></tr>
+          <tr><td>営業時間</td><td>5:00~24:00</td></tr>
+          <tr><td>住所</td><td>愛知県名古屋市中区栄3-13-12</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3261.608011106399!2d136.9031067755234!3d35.16639557275779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370d253d0a481%3A0xa7c5afbe1144febb!2z44K144Km44OKJuOCq-ODl-OCu-ODq-ODm-ODhuODqyDjgqbjgqfjg6vjg5Pjg7zmoIQ!5e0!3m2!1sja!2sjp!4v1685580245711!5m2!1sja!2sjp" width="650" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+      <div id="saunaplace04" class="saunaplace04">
+        <div id="saunaplace04img" class="saunaplace04img">
+          <img src="{% static 'img/saunaplace4.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace04ex" class="saunaplace04ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>堀田湯</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>薬草サウナ</td></tr>
+          <tr><td>料金</td><td>入浴料金大人500円、中学生300円、小学生180円、幼児80円<br>サウナ料金男性450円、女性300円</td></tr>
+          <tr><td>営業時間</td><td>平日14:00~24:00、土日祝8:00~24:00</td></tr>
+          <tr><td>住所</td><td>東京都足立区関原３丁目２０−１４</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.1478088095637!2d139.786419275552!3d35.771745372558165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601891e16f2fa97d%3A0x37fb37245c9905fc!2z5aCA55Sw5rmv!5e0!3m2!1sja!2sjp!4v1685580947248!5m2!1sja!2sjp" width="650" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+       <div id="saunaplace05" class="saunaplace05">
+        <div id="saunaplace05img" class="saunaplace05img">
+          <img src="{% static 'img/saunaplace5.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace05ex" class="saunaplace05ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>サウナ　しきじ</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>フィランドサウナ　薬草サウナ</td></tr>
+          <tr><td>料金</td><td>入浴料金1600円</td></tr>
+          <tr><td>営業時間</td><td>24時間営業</td></tr>
+          <tr><td>住所</td><td>静岡県静岡市駿河区敷地２丁目２５−１</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.2331356805516!2d138.41140207551328!3d34.95076497283189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a3634a657336d%3A0xec66693b741f2ff2!2z44K144Km44OKIOOBl-OBjeOBmA!5e0!3m2!1sja!2sjp!4v1685581436324!5m2!1sja!2sjp" width="650" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+      <div id="saunaplace06" class="saunaplace06">
+        <div id="saunaplace06img" class="saunaplace06img">
+          <img src="{% static 'img/saunaplace6.jpg' %}" class="photoplace">
+        </div>
+        <div id="saunaplace06ex" class="saunaplace06ex">
+          <table cellpadding="10">
+            <thead>
+            <tr><th><h2>名称</h2></th><th><h2>スカイスパYokohama</h2></th></tr>
+          </thead>
+          <tr><td>設置サウナ</td><td>フィランド式ドライサウナ、ドライサウナ</td></tr>
+          <tr><td>料金</td><td>入浴料金平日2550円<br></td></tr>
+          <tr><td>営業時間</td><td>24時間営業</td></tr>
+          <tr><td>住所</td><td>神奈川県横浜市西区高島２丁目１９−１２ スカイビル １４階</td></tr>
+          </table>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.6056529718544!2d139.62207387553744!3d35.46455607265789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1359061d77%3A0x7bf8d81fa4d32047!2z44K544Kr44Kk44K544ORWU9LT0hBTUE!5e0!3m2!1sja!2sjp!4v1685581942173!5m2!1sja!2sjp" width="650" height="330" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div> 
+      <a id="back-btn" href="#">TOPに戻る</a>
+      </main>
+      <script src="script.js"></script>
+  </body>
+  <footer>
+    <p>sauna</p>
+  </footer>
+</html>

@@ -1,0 +1,345 @@
+/*ナビゲーションバー */
+nav { 
+  justify-content: space-between; 
+  padding: 0px auto 20px auto;
+  background-color: black;
+  width : auto;
+  text-align:  right;
+}
+
+nav a {
+  width: 300px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+  text-align: right;
+  padding: 15px 15px;
+}
+.navbarnavbar-expand-lgnavbar-darkbg-primary{
+  margin-bottom: 0%;
+}
+
+
+/* TOPg画像サイズ */
+.carouselImg{
+  height: 600px;
+  width: 100%;
+}
+
+/* ｈ１サイズ */
+h1{
+  font-size: 45px;
+  border-radius: 47px;
+  border: 3px solid red;
+  width: 350px;
+}
+
+.title2{
+  font-size: 30px;
+  border-radius: 47px;
+  border: 3px solid rgb(41, 34, 130);
+  width: 350px;
+}
+
+/* テーブル編集 */
+ table td{
+  margin: 20px auto 20px auto;
+ }
+/* 効果コーティング */
+.photo{
+  width: 550px;
+  height: 250px;
+}
+ #effective1{
+  display: flex;
+ }
+
+ #effective1-left{
+  width: 30%;
+  margin-right: 20px;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  margin-left: 100px;
+  border: 2px dotted;
+ }
+ #effective1-right{
+  width: 50%;
+  margin-right: 20px;
+  text-align: center;
+  margin-left: 120px;
+ }
+
+ #effective2{
+  display:flex;
+ }
+
+ #effective2-left{
+  width: 50%;
+  margin-left: 20px;
+  text-align: center;
+  margin-right: 120px;
+  margin-top: 100px;
+ }
+
+ #effective2-right{
+  width: 30%;
+  margin-top: 100px;
+  margin-left: 20px;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  margin-right: 100px;
+  border: 2px dotted;
+ }
+ #effective3{
+  display: flex;
+ }
+
+ #effective3-left{
+  width: 30%;
+  margin-right: 20px;
+  margin-top: 100px;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  margin-left: 100px;
+  border: 2px dotted;
+ }
+ #effective3-right{
+  width: 50%;
+  padding-top: 100px;
+  margin-right: 20px;
+  text-align: center;
+  margin-left: 120px;
+ }
+ #effective4{
+  display: flex;
+ }
+ #effective4-left{
+  width: 50%;
+  margin-left: 20px;
+  text-align: center;
+  margin-right: 120px;
+  margin-top: 100px;
+ }
+
+ #effective4-right{
+  width: 30%;
+  margin-top: 100px;
+  margin-left: 20px;
+  padding: 15px 20px 15px 20px;
+  text-align: center;
+  margin-right: 100px;
+  border: 2px dotted;
+ }
+/* placeコーティング */
+.photoplace{
+  width: 550px;
+  height: 650px;
+}
+#saunaplace01{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+#saunaplace01img{
+  width: 40%;
+}
+
+#saunaplace01ex{
+  width: 60%;
+}
+
+#saunaplace01ex table{
+  font-size: 20px;
+}
+#saunaplace02{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+#saunaplace02img{
+  width: 40%;
+}
+
+#saunaplace02ex{
+  width: 60%;
+}
+
+#saunaplace02ex table{
+  font-size: 20px;
+}
+#saunaplace03{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+#saunaplace03img{
+  width: 40%;
+}
+
+#saunaplace03ex{
+  width: 60%;
+}
+
+#saunaplace03ex table{
+  font-size: 20px;
+}
+
+#saunaplace04{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+#saunaplace04img{
+  width: 40%;
+}
+
+#saunaplace04ex{
+  width: 60%;
+}
+
+#saunaplace04ex table{
+  font-size: 20px;
+}
+
+#saunaplace05{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+#saunaplace05img{
+  width: 40%;
+}
+
+#saunaplace05ex{
+  width: 60%;
+}
+
+#saunaplace05ex table{
+  font-size: 20px;
+}
+
+#saunaplace06{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+#saunaplace06img{
+  width: 40%;
+}
+
+#saunaplace06ex{
+  width: 60%;
+}
+
+#saunaplace06ex table{
+  font-size: 20px;
+}
+
+/* さうないろいろ */
+.totonou{
+  display: flex;
+}
+.totonou-left{
+  margin-top: 50px;
+  width: 50%;
+}
+.totonou-left img{
+  width: 100%;
+  border-radius: 45%;
+}
+.totonou-right{
+  margin-top: 50px;
+  margin-left: 50px;
+  width:50%;
+  font-size: 25px;
+  font-weight:bold ;
+  }
+
+  .sameshi p {
+  font-size: 24px;
+  font-weight: bold;
+  }
+
+  .foodGarelly{
+    display: grid;
+    grid-template-rows: 30vw 30vw 30vw 30vw;
+    grid-template-columns: 50% 50%;
+  }
+
+  .item01{
+    grid-row:1/2;
+    grid-column: 1/3;
+  }
+
+  .itme02{
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+
+  .itme03{
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  .itme04{
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+
+  .item05{
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .item06{
+    grid-row: 4/5;
+    grid-column: 1/3;
+  }
+
+  .foodGarelly li img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+
+  .saunaword{
+    margin-top: 50px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  footer{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+    padding: 20px;
+    margin-top: 30px;
+  }
+
+  /* topに戻る */
+  #back-btn{
+    display: none;
+    padding: 40px 10px;
+    background-color: #4ecf23;
+    color: #000;
+    text-decoration: none;
+    border-radius: 50%;
+
+    position: fixed;
+    bottom: 10px;
+    right:10px;
+  }

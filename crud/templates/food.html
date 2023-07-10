@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sauna</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom: 1rem;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'list' %}">サウナアプリ</a>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              {% if request.user.is_authenticated %}
+              <span class="navbar-text">
+                ようこそ{{ user.get_username}}さん
+              </span>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'logout' %}">ログアウト</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'login' %}">ログイン</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        </nav>
+      <nav class="nav2">
+        <div class="menu">
+          <a href="{% url 'top' %}">sauna</a>
+          </li><a href="{% url 'place' %}">有名所</a>
+          <a href="{% url 'food' %}">サウナいろいろ</a>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <h1 id="title1" class="title1">サウナいろいろ</h1>
+      <h2 id="title2" class="title2">ととのうとは</h2>
+      <div id="totonou" class="totonou">
+        <div id="totonou-left" class="totonou-left">
+        <img src="{% static 'img/totonou.jpeg' %}">
+       </div>
+       <div id="totonou-right" class="totonou-right">
+        <p>サウナでととのうとはサウナに入って温まった後に水風呂に入り、その後外で体を冷やすというサイクルです。<br>体内の血流が良くなり、酸素が脳を駆け巡り、リラックス状態になることです。サウナと水風呂の温冷刺激によって脳内で分泌されるのが、「β-エンドルフィン」「オキシトシン」「セロトニン」の3つの物質。「β-エンドルフィン」は、モルヒネと同じような作用をする物質で、鎮痛効果や気分の高揚・幸福感が得られる“脳内麻薬”です。「オキシトシン」はストレス緩和、「セロトニン」はうつ症状の改善・精神安定の効果があるそうです。</p>
+       </div>
+      </div>
+      <div id="sameshi" class="sameshi">
+      <h2 id="title2" class="title2">サ飯</h2>
+      <p>サ飯とはいわゆるサウナ後に食べるご飯のことであり、サウナの影響により味覚が通常に比べて敏感になり、ご飯が美味しく感じます。</p>
+      <ul class="foodGarelly">
+        <li class="item01"><img src="{% static 'img/saunafood1.jpg' %}" alt=""></li>
+        <li class="item02"><img src="{% static 'img/saunafood2.jpg' %}" alt=""></li>
+        <li class="item03"><img src="{% static 'img/saunafood3.jpg' %}" alt=""></li>
+        <li class="item04"><img src="{% static 'img/saunafood4.jpg' %}" alt=""></li>
+        <li class="item05"><img src="{% static 'img/saunafood5.jpg' %}"alt=""></li>
+        <li class="item06"><img src="{% static 'img/saunafood6.jpg' %}" alt=""></li>
+      </ul>
+     </div>
+     <div id="saunaword" class="saunaword">
+      <h2 id="title2" class="title2">サウナ用語</h2>
+      <table>
+        <tbody>
+          <tr><td>サウナー</td><td>サウナーに通う人のことです。サウナ愛好家です。</td></tr>
+          <tr><td>外気浴</td><td>サウナ、水風呂後に外で体を冷やす行為です。</td></tr>
+          <tr><td>ロウリュウ</td><td>サウナーストーンに水やアロマ水をかけて蒸気を発生させます。蒸気を発生させることにより湿度が上がり、体温をあげる効果があります。</td></tr>
+          <tr><td>アウフグース</td><td>ロウリュウ後にタオルや電動工具などを使って熱波を発生させる行為です。こちらも体温一気に上げる効果があります。</td></tr>
+          <tr><td>熱波師</td><td>ロウリュウやアウフグースをを担当する職人のことです。</td></tr>
+          <tr><td>オロポ</td><td>オロナミンCとポカリスエットを混ぜた飲み物。サウナ後に飲むと、イオンの補給や爽快さを感じることが出来、とても人気な飲み物である。</td></tr>
+          <tr><td>ととのい椅子</td><td>サウナ、水風呂後休憩後に使用する椅子。通常タイプの椅子もあれば、リクライニングタイプやベンチタイプなど色々なタイプがあります。</td></tr>
+          <tr><td>サウナハット</td><td>サウナ中に熱から頭を守る帽子のことである。多くのサウナ施設がオリジナルのサウナハットを販売しており、サウナーの中で人気商品の一つである。</td></tr>
+       </tbody>
+      </table>
+     </div>
+     <a id="back-btn" href="#">TOPに戻る</a>
+    </main>
+    <script src="script.js"></script>
+  </body>
+  <footer>
+    <p>sauna</p>
+  </footer>
+  </html>
